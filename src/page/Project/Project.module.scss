@@ -1,0 +1,127 @@
+.wrapper {
+    width: 100%;
+    $border-header: 20px;
+    animation: slide-in 0.4s ease-in;
+    @keyframes slide-in {
+        from { transform: translate3d(100%, 50px, 0); }
+        to   { transform: translate3d(0, 0, 0); }
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 130px;
+        width: 100%;
+        background-color: #FF9800;
+        padding: 50px;
+        background-image: url(../../assets/images/sp_main_bg.png);
+        background-size: cover;
+        -webkit-background-size: cover;
+        background-attachment: scroll;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border-top-right-radius: $border-header;
+        border-top-left-radius: $border-header;
+
+        
+
+        h1 {
+            font-size: 40px;
+            color: white;
+        } 
+    }
+
+    .container {
+        width: 100%;
+        background-color: white;
+        border-bottom-left-radius: $border-header;
+        border-bottom-right-radius: $border-header;
+        padding: 25px 0 50px 0;
+        margin-bottom: 100px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        .filter {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+
+            ul {
+                display: flex;
+
+                li {
+                    padding: 6px 12px;
+                    cursor: pointer;
+                    font-size: 12px;
+                    &.active {
+                        background-color: #FF9800;
+                        color: white;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+        .row {
+            display: flex;
+            width: 90%;
+            margin: 0 auto;
+        
+            .col {
+                width: 32%;
+                margin: 0 auto;
+                padding: 40px 0;
+                .detail {
+                    width: 100%;
+                    height: 194px;
+                    position: relative;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    @keyframes cover {
+                        from {
+                            width: 50px;
+                        }
+                        to {
+                            width: 100%;
+                        }
+                    }
+
+                    .cover {
+                        position: absolute;
+                        display: none;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        bottom: 0;
+                        background-color: #FF9800;
+                        opacity: 0.9;
+                        
+                        animation: cover 0.2s linear;
+                        .box {
+                            width: 100%;
+                            padding: 20px 15px;
+                            color: white;
+
+                            h6 {
+                                font-size: 16px;   
+                            }
+
+                            p {
+                                font-size: 15px;
+                            }
+                        }
+                        
+                    }
+
+                    &:hover .cover{
+                        display: flex;
+                        flex-direction: row-reverse;
+                    }
+                }
+            }
+        }
+
+    }
+}

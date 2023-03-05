@@ -1,0 +1,133 @@
+.wrapper {
+    width: 100%;
+    $border-header: 20px;
+    animation: slide-in 0.4s ease-in;
+    @keyframes slide-in {
+        from { transform: translate3d(100%, 50px, 0); }
+        to   { transform: translate3d(0, 0, 0); }
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 130px;
+        width: 100%;
+        background-color: #FF9800;
+        padding: 50px;
+        background-image: url(../../assets/images/sp_main_bg.png);
+        background-size: cover;
+        -webkit-background-size: cover;
+        background-attachment: scroll;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border-top-right-radius: $border-header;
+        border-top-left-radius: $border-header;
+
+        
+
+        h1 {
+            font-size: 40px;
+            color: white;
+        } 
+    }
+
+    .container {
+        width: 100%;
+        background-color: white;
+        border-bottom-left-radius: $border-header;
+        border-bottom-right-radius: $border-header;
+        padding: 25px 0 50px 0;
+        margin-bottom: 100px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        .row {
+            display: flex;
+            width: 90%;
+            margin: 0 auto;
+        
+            .col {
+                width: 50%;
+                h3 {
+                    font-size: 20px;
+                    margin: 10px 0 30px 0;
+                }
+                .content {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    border-left: 1px solid #ccc;
+                    font-size: 15px;
+                    padding: 10px 20px;
+                    position: relative;
+                    
+                
+                    .detail {
+                        width: 98%;
+                        padding: 20px 16px;
+                        border: 1px solid #ccc;
+                        border-left: 2px solid orange;
+
+                        &::before {
+                            content: '';
+                            display: inline-block;
+                            position: absolute;
+                            background-color: #fff;
+                            border-radius: 10px;
+                            width: 8px;
+                            height: 8px;
+                            top: 20px;
+                            left: -6px;
+                            border: 2px solid #FF9800;
+                            z-index: 2;
+                        }
+        
+                        &::after {
+                            content: '';
+                            display: inline-block;
+                            position: absolute;
+                            background-color: #FF9800;
+                            border-radius: 10px;
+                            width: 27px;
+                            height: 2px;
+                            top: 25px;
+                            left: -6px;
+                            z-index: 1;
+                        }
+
+                        h3 {
+                            font-size: 16px;
+                            margin: 0;
+                        }
+
+                        span {
+                            font-size: 12px;
+                            color: #FF9800;
+                        }
+
+                        p {
+                            margin: 4px 0;
+                            font-size: 15px;
+                        }
+                    }
+
+                }
+                .skill {
+
+                    width: 90%;
+                    padding: 30px 0;
+                    .skill-box {
+                        p {
+                            font-size: 13px;
+                            margin: 10px 0 4px 0;
+                        }
+                    }
+                }
+                
+            }
+
+           
+        }
+
+        
+    }
+}
